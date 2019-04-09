@@ -1,0 +1,3 @@
+#!/bin/sh
+set $TERM=xterm-256color
+ssh jupiter

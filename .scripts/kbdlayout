@@ -1,0 +1,22 @@
+#!/bin/bash
+# returns the current layout
+CHOICES="EN\nSV"
+CHOSEN=$(echo -e "$CHOICES" | dmenu -i)
+
+KBDLANG="$(setxkbmap -query | grep layout | awk '{printf $2}')"
+case "$CHOSEN" in
+	EN) 
+		if [ "$KBDLANG" == "se" ] ; then
+			setxkbmap us && xmodmap ~/.Xmodmap_en && xset r rate 300 50
+		else
+			exit 0
+		fi
+		;;
+	SV) 
+		if [ "$KBDLANG" == "us" ]	; then
+			setxkbmap se && xmodmap ~/.Xmodmap_se && xset r rate 300 50
+		else
+			exit 0
+		fi
+		;;
+esac

@@ -1,0 +1,11 @@
+# You can add comments to these files with #
+h	~/
+d	~/Documents
+D	~/Downloads
+m	~/Music
+pp	~/Pictures
+vv	~/Videos
+s	~/.scripts
+cf	~/.config
+dev ~/dev
+devops ~/dev/DevOps18/programmering_systemering/v37
