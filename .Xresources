@@ -1,8 +1,6 @@
 !! Transperance (0-255)
 st.alpha: 240
 
-st.font: Monospace-11;
-
 ! ONE DARK THEME
 ! special
 *.foreground:   #ABB2BF

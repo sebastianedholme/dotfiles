@@ -19,7 +19,7 @@ command=i3volume
 signal=10
 
 [memory]
-label=
+label=🧠
 interval=30
 color=#D5911A
 command=i3mem
@@ -30,7 +30,7 @@ label=
 interval=10
 
 [battery]
-command=i3battery
+command=i3battery BAT0
 interval=5
 
 [time]

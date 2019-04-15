@@ -19,14 +19,14 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
 call plug#end()
 
-set bg=dark
+"set bg=dark
 set go=a
 set mouse=a
 set nohlsearch
 set clipboard=unnamedplus
 set splitbelow splitright
 
-colorscheme onedark
+"colorscheme onedark
 let g:airline_theme='papercolor'
 
 
