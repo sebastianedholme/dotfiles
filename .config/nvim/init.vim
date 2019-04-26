@@ -26,6 +26,10 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+set completeopt=noinsert
+set completeopt+=noselect
+
 "set bg=dark
 set go=a
 set mouse=a
