@@ -1,5 +1,6 @@
 let mapleader =" "
 set noshowmode
+highlight LineNr ctermfg=blue ctermbg=black term=bold cterm=bold
 set number relativenumber
 set nu rnu
 set modeline

@@ -1,0 +1,17 @@
+# System aliases
+alias progs='(pacman -Qet && pacman -Qm | sort -u'
+alias p='sudo pacman'
+alias vim='nvim'
+
+# Config aliases
+alias cfi='nvim ~/.config/i3/config'
+alias cfz='nvim ~/.zshrc'
+alias cfv='vim ~/.config/nvim/init.vim'
+alias sv='sudo vim'
+alias v='vim'
+alias g='g'
+
+# My dotfiles git command
+# Run git init --bare $HOME/.myconfs
+# gdots config --local status.showUntrackedFiles no
+alias gdots="/usr/bin/git --git-dir=$HOME/.myconfs/ --work-tree=$HOME"
