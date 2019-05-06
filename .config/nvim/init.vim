@@ -27,11 +27,13 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 set completeopt=noinsert
 set completeopt+=noselect
 
-"set bg=dark
 set go=a
 set mouse=a
 set nohlsearch
@@ -39,7 +41,7 @@ set clipboard=unnamedplus
 set splitbelow splitright
 
 "colorscheme onedark
-let g:airline_theme='papercolor'
+let g:airline_theme='badwolf'
 
 
 " Shortcutting split navigation, saving a keypress:
@@ -55,15 +57,22 @@ let g:airline_theme='papercolor'
 	vnoremap <C-c> "+y
 	map <C-p> "+P<Paste>
 
+" goimports instead of fmt
+let g:go_fmt_command = "goimports"
+
 " Some go syntax settings
 let g:go_highlight_structs = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_operators = 1
+let g:go_highlight_function_calls = 1
 let g:go_highlight_function_parameters = 1
-let g:go_highlight_variable_declerations = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 let g:go_highlight_format_strings = 1
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
