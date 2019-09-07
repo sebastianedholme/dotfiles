@@ -15,7 +15,9 @@ set $hibernate sudo -A systemctl suspend
 
 # #---Starting External Scripts---# #
 # ARandR
-exec --no-startup-id ~/.screenlayout/default.sh
+exec --no-startup-id ~/.screenlayout/default3.sh
+# Jack
+exec --no-startup-id ~/.scripts/start_jack
 # Starts dunst for notifications:
 exec --no-startup-id dunst
 # Composite manager:
@@ -194,12 +196,12 @@ workspace $ws1 output DVI-D-1
 workspace $ws2 output DVI-D-1
 workspace $ws3 output DVI-D-1
 workspace $ws4 output DVI-D-1
-workspace $ws5 output HDMI-4
-workspace $ws6 output HDMI-4
-workspace $ws7 output HDMI-4
-workspace $ws8 output HDMI-4
-workspace $ws9 output HDMI-3
-workspace $ws10 output HDMI-3
+workspace $ws5 output HDMI-2
+workspace $ws6 output HDMI-2
+workspace $ws7 output HDMI-2
+workspace $ws8 output HDMI-2
+workspace $ws9 output HDMI-1
+workspace $ws10 output HDMI-1
 
 # move focused container to workspace
 bindsym $mod+Shift+1	move container to workspace $ws1
